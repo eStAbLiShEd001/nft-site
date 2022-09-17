@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* THE FOLLOWING CSS PROPERTIES ARE FOR MOBILE VERSION. COMMENTED SECTIONS ARE NAMED AS IT JUST AS THE SAME AS THE HTML*/
+
+/* HEADER SECTION ALONGSIDE NAVIGATIONS */
+
+header {
+    background: url(images/5166950.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* HID THE NAVBARS SO AS TO MAKE IS RESPONSIVE ON MOBILE */
+.dropdown {
+    display: none;
+}
+.logo {
+    background: rgb(117, 117, 255);
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+}
+
+/* HERO SECTION BEGINS */
+main {
+    padding: 30% 3% 10% 3%;
+    color: white;
+}
+.hero-container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.hero-container .number {
+    padding: 10% 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(252, 255, 64);
+}
+.hero-container p {
+    font-size: 0.8rem;
+    line-height: 30px;
+}
+
+.Hero-section-button {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    width: 50%;
+}
+.Hero-section-button  button {
+    margin: 5% 0;
+    padding: 10%;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    color: white;
+    font-weight: bold;
+}
+.Hero-section-button::after {
+    content: '';
+    padding: 0 5%;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid white;
+    transform: translateY(-100%);
+    z-index: 5;
+
+}
+
+.Hero-section-button::before {
+    content: '';
+    padding: 0 5%;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid white;
+    /* position: absolute; */
+    transform: translateY(100%);
+    z-index: 5;
+}
+.count {
+    text-align: center;
+}
+.count h1 {
+    font-size: 2rem;
+}
+.count p {
+    color: rgba(255, 255, 255, 0.685);
+    padding: 0 0 5% 0;
+}
+.hero-img-section {
+    padding: 15% 0;
+}
+.hero-img-section img {
+    width: 100%;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+}
+
+/* SECTION : HOW IT WORKS */
+aside {
+    background-color: rgb(7, 23, 49);
+    color: white;
+    padding: 10% 3%;
+    text-align: center;
+}
+.aside-btn {
+    padding: 3% 1%;
+    margin: 0 20%;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+.aside-btn::after {
+    content: '';
+    padding: 0 5%;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid white;
+    position: absolute;
+    transform: translateY(-65%);
+    z-index: 5;
+}
+aside h1 {
+    padding: 5% 0;
+    font-size: 1.3rem;
+}
+aside p {
+    color: rgba(255, 255, 255, 0.685);
+}
+.steps {
+    padding: 20% 3%;
+    text-align: left;
+    
+}
+.steps h2 {
+    font-size: 1rem;
+    padding: 5% 0;
+}
+.steps p {
+    font-size: 0.8rem;
+    line-height: 25px;
+}
+.steps div {
+    background: linear-gradient( rgba(0, 0, 0, 0.658), rgb(72, 3, 151));
+    padding: 10% 5%;
+    border-radius: 20px;
+    margin: 20% 0;
+
+}
+.step-child {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(72, 3, 151);
+    padding: 5%;
+    width: 50%;
+    border-radius: 30px;
+    text-align: center;
+    float: right;
+    transform: translateY(-80%);
+}
+
+/* SUB SECTION: NFT-VIDEOS */
+.nft-video video {
+    width: 100%;
+}
+.nft-video {
+    text-align: left;
+}
+.nft-collection-btn {
+    padding: 3% 8%;
+    text-align: center;
+    margin: 10% 15% 10% 0;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.nft-collection-btn::after {
+    content: '';
+    padding: 0 15%;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid white;
+    position: absolute;
+    transform: translateY(-65%);
+    z-index: 1;
+}
+.nft-video p {
+    font-size: 0.8rem;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.nft-video  button {
+    margin: 5% 0;
+    padding: 5% 10%;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    color: white;
+    font-weight: bold;
+}
+.nft-video::after {
+    content: '';
+    padding: 0 15%;
+    width: 100px;
+    height: 45px;
+    background-color: transparent;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid white;
+    /* position: absolute; */
+    transform: translateY(-115%);
+    z-index: 1;
+}
+
+/* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
+.nft-collection-section {
+    background-color: rgb(7, 23, 49);
+    padding: 30% 3%;
+    text-align: center;
+    color: white;
+}
+.collection-btn {
+    padding: 5% 8%;
+    text-align: center;
+    /* margin: 10% 15% 10% 0; */
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+.collection-btn::after {
+    content: '';
+    padding: 0 15%;
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid white;
+    position: absolute;
+    transform: translateY(-55%);
+    z-index: 1;
+}
+.nft-collection-section h1 {
+    padding: 5% 0;
+    font-size: 1.3rem;
+}
+.nft-collection-section p {
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.685);
+}
+.nft-collection {
+    padding: 30% 0;
+}
+.nft-collection div {
+    background: linear-gradient(  rgb(72, 3, 151),rgba(0, 0, 0, 0.658));
+    padding: 10% 3%;
+    margin: 10% 0;
+}
+.nft-collection img {
+    width: 90%;
+}
+.nft-collection h3 {
+    text-align: left;
+}
+.nft-collection button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3% 20%;
+    border: none;
+    text-align: left;
+    margin: 5% 0 3% 0;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+
+/* ANOTHER SECTION: ROADMAP */
+.bg-color-darkblue {
+    background-color: rgb(7, 23, 49);
+    color: white;
+    text-align: center;
+}
+
+
+
+.ques-img img {
+    width: 300px;
+    height: 250px;
+}
+
