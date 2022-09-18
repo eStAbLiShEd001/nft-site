@@ -235,7 +235,7 @@ aside p {
 /* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
 .nft-collection-section {
     background-color: rgb(7, 23, 49);
-    padding: 30% 3%;
+    padding: 10% 3% 5% 3%;
     text-align: center;
     color: white;
 }
@@ -262,8 +262,9 @@ aside p {
     z-index: 1;
 }
 .nft-collection-section h1 {
-    padding: 5% 0;
+    padding: 5%;
     font-size: 1.3rem;
+
 }
 .nft-collection-section p {
     line-height: 30px;
@@ -274,14 +275,15 @@ aside p {
 }
 .nft-collection div {
     background: linear-gradient(  rgb(72, 3, 151),rgba(0, 0, 0, 0.658));
-    padding: 10% 3%;
-    margin: 10% 0;
+    padding: 10% 2% 5% 2%;
+    margin: 10% 0 5% 0;
 }
 .nft-collection img {
     width: 90%;
 }
 .nft-collection h3 {
     text-align: left;
+    padding: 0 3%;
 }
 .nft-collection button {
     display: flex;
@@ -289,7 +291,7 @@ aside p {
     padding: 3% 20%;
     border: none;
     text-align: left;
-    margin: 5% 0 3% 0;
+    margin: 5% 0 3% 3%;
     background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
     font-weight: bold;
     border-radius: 5px;
@@ -297,16 +299,137 @@ aside p {
 }
 
 /* ANOTHER SECTION: ROADMAP */
-.bg-color-darkblue {
+.roadmap-container {
     background-color: rgb(7, 23, 49);
     color: white;
     text-align: center;
 }
-
-
-
-.ques-img img {
-    width: 300px;
-    height: 250px;
+.roadmap-btn {
+    padding: 3% 8%;
+    text-align: center;
+    margin: 0 20% 5% 20%;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+.paragraph {
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.685);
+    padding: 5% 5%;
+}
+.year {
+    margin: 15% 25%;
+    padding: 5% 8%;
+    text-align: center;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    border-radius: 5px;
+    color: white;
+}
+.timeline {
+    padding: 0 3%;
+}
+.timeline-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    background: linear-gradient(  rgb(72, 3, 151),rgba(0, 0, 0, 0.658));
+    padding: 10% 8%;
+    gap: 15%;
+    border-radius: 10px;
+    text-align: left;
+}
+.date {
+    font-size: 3rem;
+}
+.day {
+    color: rgba(0, 255, 255, 0.493);
+    font-weight: 500;
+}
+.timeline-content:first-child {
+    margin: 10% 10% 10% 0;
+}
+.timeline-content:nth-child(2) {
+    margin: 10% 0 10% 10%;
+}
+.timeline-content:nth-child(3) {
+    margin: 10% 10% 10% 0;
+}
+.timeline-content:last-child {
+    margin: 10% 0 10% 10%;
 }
 
+/* ANOTHER SECTION: FAQ SECTION */
+.faq-container {
+    padding: 30% 0 10% 0;
+}
+.faq-header {
+    padding: 3% 8%;
+    text-align: center;
+    margin: 0 20% 5% 20%;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+.faq-text {
+    padding: 5% 3%;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.685);
+}
+.faq-img img {
+    width: 100%;
+    padding: 0 3%;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    margin: 10% 0 20% 0;
+}
+.show-btn {
+    text-align: left;
+}
+.show-btn button {
+    padding: 5% 8%;
+    text-align: left;
+    margin: 5% 8% 0 1%;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* HID THE TEXTS HERE */
+.hidden0, .hidden1, .hidden2, .hidden3 {
+    display: none;
+
+}
+.display, .display1, .display2, .display3 {
+    padding: 10% 8%;
+    font-size: 0.8rem;
+}
+
+/* ANOTHER SECTION: SUSCRIBE TO OUR NEWS LETTER*/
+.news-letter {
+    margin: 10% 3%;
+    padding: 20% 10%;
+    border-radius: 10px;
+    background-blend-mode: soft-light;
+    background: url(images/scott-webb-OxHPDs4WV8Y-unsplash-removebg-preview.png), linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.news-letter p {
+    padding: 8% 0;
+    text-align: left;
+    line-height: 30px;
+}
+.news-letter h1 {
+    text-align: left;
+}
+.email-suscribe {
+    background-color: white;
+    overflow: hidden;
+    padding: 5% 5%;
+}
