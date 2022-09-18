@@ -19,12 +19,12 @@ header {
 .dropdown {
     display: none;
 }
-.logo {
+/* .logo {
     background: rgb(117, 117, 255);
     position: fixed;
     width: 100%;
     z-index: 6;
-}
+} */
 
 /* HERO SECTION BEGINS */
 main {
@@ -60,34 +60,9 @@ main {
     background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
     color: white;
     font-weight: bold;
-}
-.Hero-section-button::after {
-    content: '';
-    padding: 0 5%;
-    width: 150px;
-    height: 50px;
-    background-color: transparent;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid white;
-    transform: translateY(-100%);
-    z-index: 5;
-
+    cursor: pointer;
 }
 
-.Hero-section-button::before {
-    content: '';
-    padding: 0 5%;
-    width: 150px;
-    height: 50px;
-    background-color: transparent;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid white;
-    /* position: absolute; */
-    transform: translateY(100%);
-    z-index: 5;
-}
 .count {
     text-align: center;
 }
@@ -99,10 +74,11 @@ main {
     padding: 0 0 5% 0;
 }
 .hero-img-section {
+    display: flex;
+    flex-direction: column;
     padding: 15% 0;
 }
 .hero-img-section img {
-    width: 100%;
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
 }
@@ -122,19 +98,6 @@ aside {
     border-radius: 5px;
 
 }
-.aside-btn::after {
-    content: '';
-    padding: 0 5%;
-    width: 150px;
-    height: 40px;
-    background-color: transparent;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid white;
-    position: absolute;
-    transform: translateY(-65%);
-    z-index: 5;
-}
 aside h1 {
     padding: 5% 0;
     font-size: 1.3rem;
@@ -144,14 +107,13 @@ aside p {
 }
 .steps {
     padding: 20% 3%;
-    text-align: left;
-    
+    text-align: left; 
 }
 .steps h2 {
     font-size: 1rem;
     padding: 5% 0;
 }
-.steps p {
+.stepsParagraph {
     font-size: 0.8rem;
     line-height: 25px;
 }
@@ -190,20 +152,7 @@ aside p {
     border-radius: 5px;
 }
 
-.nft-collection-btn::after {
-    content: '';
-    padding: 0 15%;
-    width: 150px;
-    height: 40px;
-    background-color: transparent;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid white;
-    position: absolute;
-    transform: translateY(-65%);
-    z-index: 1;
-}
-.nft-video p {
+.nft-video .nftParagraph, .nft-collection-btn {
     font-size: 0.8rem;
     line-height: 25px;
     font-weight: 500;
@@ -218,22 +167,15 @@ aside p {
     color: white;
     font-weight: bold;
 }
-.nft-video::after {
-    content: '';
-    padding: 0 15%;
-    width: 100px;
-    height: 45px;
-    background-color: transparent;
-    display: flex;
-    border-radius: 5px;
-    border: 1px solid white;
-    /* position: absolute; */
-    transform: translateY(-115%);
-    z-index: 1;
-}
 
 /* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
 .nft-collection-section {
+    background:rgba(0, 0, 0, 0.212) url(images/choong-deng-xiang-EbbqeyHpbto-unsplash.jpg)
+    repeat fixed 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
     background-color: rgb(7, 23, 49);
     padding: 10% 3% 5% 3%;
     text-align: center;
@@ -248,19 +190,7 @@ aside p {
     border-radius: 5px;
     color: white;
 }
-.collection-btn::after {
-    content: '';
-    padding: 0 15%;
-    width: 180px;
-    height: 45px;
-    background-color: transparent;
-    display: flex;
-    border-radius: 5px;
-    border: 1px solid white;
-    position: absolute;
-    transform: translateY(-55%);
-    z-index: 1;
-}
+
 .nft-collection-section h1 {
     padding: 5%;
     font-size: 1.3rem;
@@ -280,10 +210,21 @@ aside p {
 }
 .nft-collection img {
     width: 90%;
+    cursor: pointer;
+}
+.nft-collection img:hover {
+    transition: 0.4s ease-in-out;
+    width: 95%;
 }
 .nft-collection h3 {
     text-align: left;
     padding: 0 3%;
+}
+.nft-collection button:hover {
+    transition: 2s ease;
+    transition-property: background;
+    background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
+
 }
 .nft-collection button {
     display: flex;
@@ -296,6 +237,7 @@ aside p {
     font-weight: bold;
     border-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 
 /* ANOTHER SECTION: ROADMAP */
@@ -415,10 +357,14 @@ aside p {
     padding: 20% 10%;
     border-radius: 10px;
     background-blend-mode: soft-light;
-    background: url(images/scott-webb-OxHPDs4WV8Y-unsplash-removebg-preview.png), linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    background: url(images/scott-webb-OxHPDs4WV8Y-unsplash-removebg-preview.png), linear-gradient(to right,  rgb(88, 7, 180), rgb(176, 176, 245));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.news-img {
+    display: flex;
+    flex-direction: column;
 }
 .news-letter p {
     padding: 8% 0;
@@ -450,6 +396,7 @@ aside p {
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
     color: white;
     background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
@@ -526,3 +473,295 @@ footer {
 .footer-child img {
     width: 15%;
 }
+
+/* DESIGN FOR MOBILE VERSION ENDED. */
+
+/* FOR SCREEN SIZES BETWEEN 800PX AND ABOVE... */
+@media (min-width: 700px) {
+    main {
+        padding: 0 5%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 2%;
+    }
+}
+
+@media (min-width: 950px) {
+/* HERO SECTION BEGINS */
+
+    main {
+        padding: 10% 5%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 2%;
+    }
+    .hero-container h1 {
+        font-size: 3.5rem;
+    }
+    .hero-container .number {
+        padding: 5% 0;
+    }
+    .hero-container p {
+        font-size: 1.2rem;
+     line-height: 35px;
+    }
+    .Hero-section-button {
+        flex-direction: row;
+        width: 100%;
+
+    }
+    .Hero-section-button button {
+        margin: 0 5% 0 0;
+        padding: 3% 8%;
+    }
+    .count {
+        text-align: left;
+    }
+    .count h1 {
+    font-size: 2.5rem;
+    }
+    .count p {
+        padding: 0 ;
+    }
+    .hero-img-section {
+        padding: 0;
+    }
+    .hero-img-section img {
+        height: 400px;
+    }
+/* SECTION : HOW IT WORKS */
+.aside-btn {
+    /* padding: 3% 1%; */
+    padding: 2% 2%;
+    margin: 0 30%;
+}
+aside h1 {
+    padding: 2% 0;
+    font-size: 2.5rem;
+}
+.text-aside {
+    margin: 0 20%;
+    font-size: 1.2rem;
+    line-height: 35px;
+}
+.steps {
+    padding: 5% 3%;
+    text-align: left; 
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2%;
+}
+.step-child {
+    font-size: 1.2rem;
+}
+.steps h2 {
+    font-size: 1.2rem;
+    padding: 5% 0;
+}
+.stepsParagraph {
+font-size: 1rem;
+line-height: 35px;
+}
+/* SUB SECTION: NFT-VIDEOS */
+.nft-video {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 5%;
+    gap: 5%;
+}
+.nft-video video {
+    height: 400px;
+}
+
+.nft-video  button {
+    margin: 5% 0;
+    padding: 3% 8%;
+}
+.nft-collection-btn {
+    padding: 3% 8%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+.nft-video .nftParagraph {
+font-size: 1rem;
+line-height: 35px;
+}
+/* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
+.nft-collection-section {
+    padding: 10% 5% 5% 5%;
+}
+.collection-btn {
+    padding: 2% 5%;
+    font-size: 1.2rem;
+    margin: 0 25%;
+}
+.nft-collection-section h1 {
+    font-size: 2.5rem;
+    padding: 3% 0 1% 0;
+}
+.nft-collection-section p {
+    line-height: 30px;
+    margin: 0 25%;
+}
+.nft-collection {
+    padding: 10% 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 2%;
+}
+.nft-collection div {
+    padding: 20% 5%;
+}
+.nft-collection h3 {
+    padding: 3% 3%;
+}
+
+.nft-collection button {
+    padding: 6% 30%;
+    margin: 5% 0 3% 3%;
+}
+/* ROADMAP */
+.roadmap-container {
+padding: 10% 5%;
+}
+.roadmap-btn {
+    padding: 2% 5%;
+    font-size: 1.2rem;
+    margin: 0 25%;
+}
+.roadmap-heading {
+    font-size: 2.5rem;
+    padding: 3% 0 1% 0;
+}
+.paragraph {
+    line-height: 30px;
+    margin: 0 25%;
+    padding: 0;
+}
+.year {
+    margin: 5% 40%;
+    padding: 2% 2%;
+}
+/* SUB SECTION FOR TIMELINE */
+.timeline {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.timeline-content {
+    padding: 8% 5%;
+    gap: 10%;
+}
+.timeline-content:first-child {
+    margin: 0 10% 15% 0;
+}
+.timeline-content:nth-child(2) {
+    margin: 15% 10% 0 0;
+    transform: translateY(20%);
+}
+.timeline-content:nth-child(3) {
+    margin: 0 10% 15% 0;
+}
+.timeline-content:last-child {
+    margin: 15% 10% 0 0;
+    transform: translateY(20%);
+
+}
+.title {
+    font-size: 1.3rem;
+    padding: 2% 0;
+}
+/* FAQ SECTION  */
+.faq-container {
+    padding: 20% 5%;
+}
+.faq-header {
+    padding: 2% 5%;
+    font-size: 1.2rem;
+    margin: 0 25%;
+}
+.faq-sub-header {
+    font-size: 2.5rem;
+    padding: 3% 0 1% 0;
+}
+.faq-text {
+    line-height: 30px;
+    margin: 0 25%;
+    padding: 0;
+}
+.questions {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10%;
+    margin: 10% 0 0 0;
+}
+.faq-img img {
+    margin: 0;
+    padding: 0;
+}
+.show-btn button {
+    width: 100%;
+}
+
+.display, .display1, .display2, .display3 {
+    padding: 5% 5%;
+    line-height: 30px;
+    font-size: 1.2rem;
+}
+/* ANOTHER SECTION: SUSCRIBE TO OUR NEWS LETTER*/
+.news-letter {
+    margin: 0 5%;
+    padding: 5% 5%;
+
+}
+.flexx {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.news-letter p {
+    padding: 3% 0;
+    font-size: 1.2rem;
+}
+.news-letter h1 {
+   font-size: 2.5rem;
+}
+.email-suscribe {
+    padding: 5% 3%;
+    border-radius: 10px;
+}
+.email-form {
+    display: flex;
+}
+.email-suscribe input[type = email] {
+    padding: 3% 3%;
+}
+.contact-us-text {
+    padding: 2% 5%;
+    font-size: 1.2rem;
+    margin: 0 25%;
+}
+.contact-us h1 {
+    font-size: 2.5rem;
+    padding: 3% 0 1% 0;
+}
+.contact-us-text-two {
+    line-height: 30px;
+    margin: 0 25%;
+    padding: 0;
+}
+.second-form input, textarea {
+    margin: 0;
+    width: 80%;
+}
+.second-form div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.second-form input[type = text], input[type = email] {
+    padding: 1% 2%;
+    margin: 3% 1%;
+}
+
+
+}
+
