@@ -431,5 +431,98 @@ aside p {
 .email-suscribe {
     background-color: white;
     overflow: hidden;
+    padding: 15% 3%;
+    border-radius: 10px;
+}
+.email-suscribe input[type = email] {
+    padding: 5% 3%;
+    border: 2px solid rgb(88, 7, 180);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+}
+.email-suscribe input[type = submit] {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5% 10%;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+}
+
+/* ANOTHER SECTION: CONTACT US */
+.contact-us {
+    padding: 20% 3%;
+}
+.contact-us-text {
+    padding: 3% 8%;
+    text-align: center;
+    margin: 0 20% 5% 20%;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+.contact-us-text-two {
+    padding: 5% 3%;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.685);
+}
+.second-form input, textarea{
+    width: 100%;
+    margin: 5% 0;
+    color: white;
+}
+.second-form input[type = text], input[type = email] {
+    padding: 3% 3%;
+    border: 2px solid gray;
+    background-color: transparent;
+}
+textarea {
+    padding: 3% 3%;
+    border: 2px solid gray;
+    background-color: transparent;
+}
+.second-form input[type = submit] {
     padding: 5% 5%;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+}
+.second-form input::placeholder, textarea::placeholder {
+    color: white;
+    font-style: italic;
+}
+
+/* LAST SECTION: BEGINNING OF FOOTER SECTION */
+footer {
+    background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
+    color: white;
+    padding: 5% 3%;
+}
+.footer-child h3 {
+    font-size: 0.8rem;
+    padding: 3% 0;
+}
+.footer-child ul li {
+    font-size: 0.8rem;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.685);
+}
+.footer-child {
+    margin: 5% 0;
+}
+.footer-child p {
+    font-size: 0.8rem;
+    line-height: 30px;
+}
+.footer-child img {
+    width: 15%;
 }
