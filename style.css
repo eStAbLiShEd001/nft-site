@@ -449,6 +449,7 @@ textarea {
     border-radius: 5px;
     font-weight: bold;
     color: white;
+    cursor: pointer;
     background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 .second-form input::placeholder, textarea::placeholder {
@@ -467,6 +468,7 @@ footer {
     padding: 3% 0;
 }
 .footer-child ul li {
+    list-style-type: none;
     font-size: 0.8rem;
     line-height: 30px;
     color: rgba(255, 255, 255, 0.685);
@@ -488,7 +490,11 @@ footer {
     .steps {
         display: grid;
         grid-template-columns: auto auto;
-        gap: 2%;
+        gap: 5%;
+    }
+    .steps div {
+        /* padding: 10% 5%; */
+        margin: 10% 0;
     }
     .nft-collection {
         display: grid;
@@ -520,6 +526,19 @@ footer {
     .Hero-section-button button {
         margin: 0 5% 0 0;
         padding: 3% 8%;
+    }
+    .second-form input, textarea {
+        margin: 1% 0;
+        width: 80%;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns:  auto auto;
+        gap: 5%;
+    }
+    .footer-child {
+        margin: 0;
     }
 }
 
@@ -571,7 +590,6 @@ footer {
     }
 /* SECTION : HOW IT WORKS */
 .aside-btn {
-    /* padding: 3% 1%; */
     padding: 2% 2%;
     margin: 0 30%;
 }
@@ -779,7 +797,9 @@ padding: 10% 5%;
 .email-suscribe input[type = email] {
     padding: 3% 3%;
 }
-
+.contact-us {
+    padding: 20% 5% 5% 5%;
+}
 .contact-us-text {
     padding: 2% 5%;
     font-size: 1.2rem;
@@ -794,19 +814,41 @@ padding: 10% 5%;
     margin: 0 25%;
     padding: 0;
 }
-.second-form input, textarea {
-    margin: 0;
-    width: 80%;
+.second-form {
+    margin: 5% 0;
 }
-.second-form div {
-    display: grid;
-    grid-template-columns: auto auto;
+.second-form input, textarea {
+    margin: 1% 0;
+    width: 80%;
 }
 .second-form input[type = text], input[type = email] {
     padding: 1% 2%;
-    margin: 3% 1%;
 }
-
+textarea {
+    padding: 1% 2%;
+    height: 100px;
+    overflow: hidden;
+}
+.second-form input[type = submit] {
+    padding: 2% 4%;
+    width: 20%;
+}
+/* LAST SECTION: BEGINNING OF FOOTER SECTION */
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10%;
+}
+.footer-child h3 {
+    font-size: 0.8rem;
+    padding: 0;
+}
+.footer-child {
+    margin: 0;
+}
+.footer-child p, .footer-child ul li {
+    font-size: 0.9rem;
+}
 
 }
 
