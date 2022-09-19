@@ -342,10 +342,19 @@ aside p {
 }
 
 /* HID THE TEXTS HERE */
-.hidden0, .hidden1, .hidden2, .hidden3 {
+.hidden0, .hidden1, .hidden2, .hidden3, .hidden4 {
     display: none;
 
 }
+.overlay {
+    position: absolute;
+    transform: translateY(-150%);
+    width: 90%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
 .display, .display1, .display2, .display3 {
     padding: 10% 8%;
     font-size: 0.8rem;
@@ -363,8 +372,7 @@ aside p {
     background-size: cover;
 }
 .news-img {
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 .news-letter p {
     padding: 8% 0;
@@ -476,15 +484,47 @@ footer {
 
 /* DESIGN FOR MOBILE VERSION ENDED. */
 
-/* FOR SCREEN SIZES BETWEEN 800PX AND ABOVE... */
 @media (min-width: 700px) {
-    main {
-        padding: 0 5%;
+    .steps {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2%;
+    }
+    .nft-collection {
         display: grid;
         grid-template-columns: auto auto auto;
         gap: 2%;
     }
+    .timeline {
+        padding: 0 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .faq-container {
+        padding: 20% 5%;
+    }
+    .questions {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2%;
+    }
+    .news-img {
+        display: flex;
+        flex-direction: column;
+    }
+    .Hero-section-button {
+        flex-direction: row;
+        width: 100%;
+
+    }
+    .Hero-section-button button {
+        margin: 0 5% 0 0;
+        padding: 3% 8%;
+    }
 }
+
+/* FOR SCREEN SIZES BETWEEN 800PX AND ABOVE... */
+
 
 @media (min-width: 950px) {
 /* HERO SECTION BEGINS */
@@ -722,6 +762,10 @@ padding: 10% 5%;
     padding: 3% 0;
     font-size: 1.2rem;
 }
+.news-img {
+    display: flex;
+    flex-direction: column;
+}
 .news-letter h1 {
    font-size: 2.5rem;
 }
@@ -735,6 +779,7 @@ padding: 10% 5%;
 .email-suscribe input[type = email] {
     padding: 3% 3%;
 }
+
 .contact-us-text {
     padding: 2% 5%;
     font-size: 1.2rem;
@@ -764,4 +809,5 @@ padding: 10% 5%;
 
 
 }
+
 

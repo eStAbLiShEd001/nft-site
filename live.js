@@ -18,6 +18,7 @@ const displayText1 = document.querySelector('.display1');
 const displayText2 = document.querySelector('.display2');
 const displayText3 = document.querySelector('.display3');
 
+
 const textZero = function() {
     displayText.classList.add('hidden0');
 }
