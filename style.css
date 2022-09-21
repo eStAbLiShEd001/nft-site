@@ -4,6 +4,10 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+
+}
 
 /* THE FOLLOWING CSS PROPERTIES ARE FOR MOBILE VERSION. COMMENTED SECTIONS ARE NAMED AS IT JUST AS THE SAME AS THE HTML*/
 
@@ -15,22 +19,20 @@ header {
     background-position: center;
     background-size: cover;
 }
+
+
 /* HID THE NAVBARS SO AS TO MAKE IS RESPONSIVE ON MOBILE */
 .dropdown {
     display: none;
 }
-/* .logo {
-    background: rgb(117, 117, 255);
-    position: fixed;
-    width: 100%;
-    z-index: 6;
-} */
 
 /* HERO SECTION BEGINS */
 main {
     padding: 30% 3% 10% 3%;
     color: white;
 }
+
+
 .hero-container h1 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -66,6 +68,7 @@ main {
 .count {
     text-align: center;
 }
+
 .count h1 {
     font-size: 2rem;
 }
@@ -77,6 +80,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 15% 0;
+
 }
 .hero-img-section img {
     border-top-left-radius: 150px;
@@ -89,6 +93,7 @@ aside {
     color: white;
     padding: 10% 3%;
     text-align: center;
+
 }
 .aside-btn {
     padding: 3% 1%;
@@ -395,7 +400,6 @@ aside p {
     width: 100%;
     font-size: 1rem;
     background-color: transparent;
-    color: white;
 }
 .email-suscribe input[type = submit] {
     display: flex;
@@ -461,6 +465,7 @@ textarea {
 footer {
     background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
     color: white;
+    clip-path: polygon(0% 0%, 55% 0, 100% 22%, 100% 100%, 0% 100%);
     padding: 5% 3%;
 }
 .footer-child h3 {
@@ -482,6 +487,12 @@ footer {
 }
 .footer-child img {
     width: 15%;
+}
+.copyright {
+    color: white;
+}
+.copyright a {
+    color: white;
 }
 
 /* DESIGN FOR MOBILE VERSION ENDED. */
@@ -545,7 +556,7 @@ footer {
 /* FOR SCREEN SIZES BETWEEN 800PX AND ABOVE... */
 
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
 /* HERO SECTION BEGINS */
 
     main {
