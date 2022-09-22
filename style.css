@@ -484,16 +484,13 @@ footer {
 .footer-child img {
     width: 15%;
 }
-.copyright {
-    color: white;
-}
-.copyright a {
-    color: white;
-}
 
 /* DESIGN FOR MOBILE VERSION ENDED. */
 
 @media (min-width: 700px) {
+    body {
+        width: 100%;
+    }
     .steps {
         display: grid;
         grid-template-columns: auto auto;
