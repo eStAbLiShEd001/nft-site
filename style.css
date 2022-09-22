@@ -6,7 +6,6 @@
 }
 body {
     background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-
 }
 
 /* THE FOLLOWING CSS PROPERTIES ARE FOR MOBILE VERSION. COMMENTED SECTIONS ARE NAMED AS IT JUST AS THE SAME AS THE HTML*/
@@ -515,7 +514,7 @@ footer {
     .timeline {
         padding: 0 5%;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
     }
     .faq-container {
         padding: 20% 5%;
@@ -532,11 +531,13 @@ footer {
     .Hero-section-button {
         flex-direction: row;
         width: 100%;
-
     }
     .Hero-section-button button {
         margin: 0 5% 0 0;
         padding: 3% 8%;
+    }
+    .timeline-content {
+        font-size: 0.8rem;
     }
     .second-form input, textarea {
         margin: 1% 0;
