@@ -4,9 +4,7 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-body {
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-}
+
 
 /* THE FOLLOWING CSS PROPERTIES ARE FOR MOBILE VERSION. COMMENTED SECTIONS ARE NAMED AS IT JUST AS THE SAME AS THE HTML*/
 
@@ -464,7 +462,6 @@ textarea {
 footer {
     background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
     color: white;
-    clip-path: polygon(0% 0%, 55% 0, 100% 22%, 100% 100%, 0% 100%);
     padding: 5% 3%;
 }
 .footer-child h3 {
