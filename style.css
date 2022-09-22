@@ -1,862 +1,1097 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-
 
 /* THE FOLLOWING CSS PROPERTIES ARE FOR MOBILE VERSION. COMMENTED SECTIONS ARE NAMED AS IT JUST AS THE SAME AS THE HTML*/
 
 /* HEADER SECTION ALONGSIDE NAVIGATIONS */
 
 header {
-    background: url(images/5166950.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background: url(images/5166950.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-
 
 /* HID THE NAVBARS SO AS TO MAKE IS RESPONSIVE ON MOBILE */
 .dropdown {
-    display: none;
+  display: none;
 }
 
 /* HERO SECTION BEGINS */
 main {
-    padding: 30% 3% 10% 3%;
-    color: white;
+  padding: 30% 3% 10% 3%;
+  color: white;
 }
-
-
+.hero-container {
+  animation: slideleft 1s alternate;
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .hero-container h1 {
-    font-size: 1.8rem;
-    font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 .hero-container .number {
-    padding: 10% 0;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: rgb(252, 255, 64);
+  padding: 10% 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(252, 255, 64);
 }
 .hero-container p {
-    font-size: 0.8rem;
-    line-height: 30px;
+  font-size: 0.8rem;
+  line-height: 30px;
 }
 
 .Hero-section-button {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 0;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+  width: 50%;
 }
-.Hero-section-button  button {
-    margin: 5% 0;
-    padding: 10%;
-    border-radius: 5px;
-    border: none;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+.Hero-section-button button {
+  margin: 5% 0;
+  padding: 10%;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.Hero-section-button button:hover {
+  border: none;
+}
+.Hero-section-button button:hover::after {
+  top: 0;
+  left: 0;
+}
+.Hero-section-button button::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 
 .count {
-    text-align: center;
+  text-align: center;
+  animation: slideright 1s alternate;
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .count h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .count p {
-    color: rgba(255, 255, 255, 0.685);
-    padding: 0 0 5% 0;
+  color: rgba(255, 255, 255, 0.685);
+  padding: 0 0 5% 0;
 }
 .hero-img-section {
-    display: flex;
-    flex-direction: column;
-    padding: 15% 0;
+  animation: slideright 1s alternate;
 
+  display: flex;
+  flex-direction: column;
+  padding: 15% 0;
 }
 .hero-img-section img {
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
 }
 
 /* SECTION : HOW IT WORKS */
 aside {
-    background-color: rgb(7, 23, 49);
-    color: white;
-    padding: 10% 3%;
-    text-align: center;
-
+  background-color: rgb(7, 23, 49);
+  color: white;
+  padding: 10% 3%;
+  text-align: center;
 }
 .aside-btn {
-    padding: 3% 1%;
-    margin: 0 20%;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
-
+  padding: 3% 1%;
+  margin: 0 20%;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+  font-weight: bold;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
 }
 aside h1 {
-    padding: 5% 0;
-    font-size: 1.3rem;
+  padding: 5% 0;
+  font-size: 1.3rem;
+}
+.aside-btn:hover {
+  border: none;
+}
+.aside-btn:hover::after {
+  top: 0;
+  left: 0;
+}
+.aside-btn::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 aside p {
-    color: rgba(255, 255, 255, 0.685);
+  color: rgba(255, 255, 255, 0.685);
 }
 .steps {
-    padding: 20% 3%;
-    text-align: left; 
+  padding: 20% 3%;
+  text-align: left;
+  animation: disappear 2s 4s alternate;
+}
+@keyframes disappear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 .steps h2 {
-    font-size: 1rem;
-    padding: 5% 0;
+  font-size: 1rem;
+  padding: 5% 0;
 }
 .stepsParagraph {
-    font-size: 0.8rem;
-    line-height: 25px;
+  font-size: 0.8rem;
+  line-height: 25px;
 }
 .steps div {
-    background: linear-gradient( rgba(0, 0, 0, 0.658), rgb(72, 3, 151));
-    padding: 10% 5%;
-    border-radius: 20px;
-    margin: 20% 0;
-
+  background: linear-gradient(rgba(0, 0, 0, 0.658), rgb(72, 3, 151));
+  padding: 10% 5%;
+  border-radius: 20px;
+  margin: 20% 0;
 }
 .step-child {
-    color: white;
-    font-weight: bold;
-    background-color: rgb(72, 3, 151);
-    padding: 5%;
-    width: 50%;
-    border-radius: 30px;
-    text-align: center;
-    float: right;
-    transform: translateY(-80%);
+  color: white;
+  font-weight: bold;
+  background-color: rgb(72, 3, 151);
+  padding: 5%;
+  width: 50%;
+  border-radius: 30px;
+  text-align: center;
+  float: right;
+  transform: translateY(-100%);
 }
 
 /* SUB SECTION: NFT-VIDEOS */
 .nft-video video {
-    width: 100%;
+  width: 100%;
 }
+
 .nft-video {
-    text-align: left;
+  text-align: left;
 }
 .nft-collection-btn {
-    padding: 3% 8%;
-    text-align: center;
-    margin: 10% 15% 10% 0;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
+  padding: 3% 8%;
+  text-align: center;
+  margin: 10% 15% 10% 0;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+  font-weight: bold;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.nft-collection-btn:hover,
+.nft-video button:hover {
+  border: none;
+}
+.nft-collection-btn:hover::after,
+.nft-video button:hover::after {
+  top: 0;
+  left: 0;
+}
+.nft-collection-btn::after,
+.nft-video button::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 
-.nft-video .nftParagraph, .nft-collection-btn {
-    font-size: 0.8rem;
-    line-height: 25px;
-    font-weight: 500;
+.nft-video .nftParagraph,
+.nft-collection-btn {
+  font-size: 0.8rem;
+  line-height: 25px;
+  font-weight: 500;
 }
 
-.nft-video  button {
-    margin: 5% 0;
-    padding: 5% 10%;
-    border-radius: 5px;
-    border: none;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    color: white;
-    font-weight: bold;
+.nft-video button {
+  margin: 5% 0;
+  padding: 5% 10%;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
 }
 
 /* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
 .nft-collection-section {
-    background:rgba(0, 0, 0, 0.212) url(images/choong-deng-xiang-EbbqeyHpbto-unsplash.jpg)
-    repeat fixed 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    background-color: rgb(7, 23, 49);
-    padding: 10% 3% 5% 3%;
-    text-align: center;
-    color: white;
+  background: rgba(0, 0, 0, 0.212)
+    url(images/choong-deng-xiang-EbbqeyHpbto-unsplash.jpg) repeat fixed 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-color: rgb(7, 23, 49);
+  padding: 10% 3% 5% 3%;
+  text-align: center;
+  color: white;
 }
 .collection-btn {
-    padding: 5% 8%;
-    text-align: center;
-    /* margin: 10% 15% 10% 0; */
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
-    color: white;
+  padding: 5% 8%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.collection-btn:hover,
+.nft-collection button:hover {
+  border: none;
+}
+.collection-btn:hover::after,
+.nft-collection button:hover::after {
+  top: 0;
+  left: 0;
+}
+.collection-btn::after,
+.nft-collection button::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 
 .nft-collection-section h1 {
-    padding: 5%;
-    font-size: 1.3rem;
-
+  padding: 5%;
+  font-size: 1.3rem;
 }
 .nft-collection-section p {
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.685);
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.685);
 }
 .nft-collection {
-    padding: 30% 0;
+  padding: 30% 0;
 }
 .nft-collection div {
-    background: linear-gradient(  rgb(72, 3, 151),rgba(0, 0, 0, 0.658));
-    padding: 10% 2% 5% 2%;
-    margin: 10% 0 5% 0;
+  background: linear-gradient(rgb(72, 3, 151), rgba(0, 0, 0, 0.658));
+  padding: 10% 2% 5% 2%;
+  margin: 10% 0 5% 0;
 }
 .nft-collection img {
-    width: 90%;
-    cursor: pointer;
+  width: 90%;
+  cursor: pointer;
 }
 .nft-collection img:hover {
-    transition: 0.4s ease-in-out;
-    width: 95%;
+  transition: 0.4s ease-in-out;
+  width: 95%;
 }
 .nft-collection h3 {
-    text-align: left;
-    padding: 0 3%;
-}
-.nft-collection button:hover {
-    transition: 2s ease;
-    transition-property: background;
-    background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
-
+  text-align: left;
+  padding: 0 3%;
 }
 .nft-collection button {
-    display: flex;
-    justify-content: flex-end;
-    padding: 3% 20%;
-    border: none;
-    text-align: left;
-    margin: 5% 0 3% 3%;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding: 3% 20%;
+  margin: 5% 0 3% 3%;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
 }
 
 /* ANOTHER SECTION: ROADMAP */
 .roadmap-container {
-    background-color: rgb(7, 23, 49);
-    color: white;
-    text-align: center;
+  background-color: rgb(7, 23, 49);
+  color: white;
+  text-align: center;
 }
 .roadmap-btn {
-    padding: 3% 8%;
-    text-align: center;
-    margin: 0 20% 5% 20%;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
-    color: white;
+  padding: 3% 8%;
+  margin: 0 20% 5% 20%;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.roadmap-btn:hover,
+.year:hover {
+  border: none;
+}
+.roadmap-btn:hover::after,
+.year:hover::after {
+  top: 0;
+  left: 0;
+}
+.roadmap-btn::after,
+.year::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 .paragraph {
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.685);
-    padding: 5% 5%;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.685);
+  padding: 5% 5%;
 }
 .year {
-    margin: 15% 25%;
-    padding: 5% 8%;
-    text-align: center;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    border-radius: 5px;
-    color: white;
+  margin: 15% 25%;
+  padding: 5% 8%;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
 }
 .timeline {
-    padding: 0 3%;
+  padding: 0 3%;
 }
 .timeline-content {
-    display: grid;
-    grid-template-columns: auto auto;
-    background: linear-gradient(  rgb(72, 3, 151),rgba(0, 0, 0, 0.658));
-    padding: 10% 8%;
-    gap: 15%;
-    border-radius: 10px;
-    text-align: left;
+  display: grid;
+  grid-template-columns: auto auto;
+  background: linear-gradient(rgb(72, 3, 151), rgba(0, 0, 0, 0.658));
+  padding: 10% 8%;
+  gap: 15%;
+  border-radius: 10px;
+  text-align: left;
 }
 .date {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 .day {
-    color: rgba(0, 255, 255, 0.493);
-    font-weight: 500;
+  color: rgba(0, 255, 255, 0.493);
+  font-weight: 500;
 }
 .timeline-content:first-child {
-    margin: 10% 10% 10% 0;
+  margin: 10% 10% 10% 0;
 }
 .timeline-content:nth-child(2) {
-    margin: 10% 0 10% 10%;
+  margin: 10% 0 10% 10%;
 }
 .timeline-content:nth-child(3) {
-    margin: 10% 10% 10% 0;
+  margin: 10% 10% 10% 0;
 }
 .timeline-content:last-child {
-    margin: 10% 0 10% 10%;
+  margin: 10% 0 10% 10%;
 }
 
 /* ANOTHER SECTION: FAQ SECTION */
 .faq-container {
-    padding: 30% 0 10% 0;
+  padding: 30% 0 10% 0;
 }
 .faq-header {
-    padding: 3% 8%;
-    text-align: center;
-    margin: 0 20% 5% 20%;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
-    color: white;
+  padding: 3% 8%;
+  margin: 0 20% 5% 20%;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.faq-header:hover {
+  border: none;
+}
+.faq-header:hover::after {
+  top: 0;
+  left: 0;
+}
+.faq-header::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 .faq-text {
-    padding: 5% 3%;
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.685);
+  padding: 5% 3%;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.685);
 }
 .faq-img img {
-    width: 100%;
-    padding: 0 3%;
-    border-top-right-radius: 150px;
-    border-top-left-radius: 150px;
-    margin: 10% 0 20% 0;
+  width: 100%;
+  padding: 0 3%;
+  border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+  margin: 10% 0 20% 0;
 }
 .show-btn {
-    text-align: left;
+  text-align: left;
 }
 .show-btn button {
-    padding: 5% 8%;
-    text-align: left;
-    margin: 5% 8% 0 1%;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: 600;
-    border-radius: 5px;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
+  padding: 5% 8%;
+  text-align: left;
+  margin: 5% 8% 0 1%;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* HID THE TEXTS HERE */
-.hidden0, .hidden1, .hidden2, .hidden3, .hidden4 {
-    display: none;
-
+.hidden0,
+.hidden1,
+.hidden2,
+.hidden3,
+.hidden4 {
+  display: none;
 }
+
 .overlay {
-    position: absolute;
-    transform: translateY(-150%);
-    width: 90%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    z-index: 5;
-  }
-.display, .display1, .display2, .display3 {
-    padding: 10% 8%;
-    font-size: 0.8rem;
+  position: absolute;
+  transform: translateY(-150%);
+  width: 90%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.display,
+.display1,
+.display2,
+.display3 {
+  padding: 10% 8%;
+  font-size: 0.8rem;
 }
 
 /* ANOTHER SECTION: SUSCRIBE TO OUR NEWS LETTER*/
 .news-letter {
-    margin: 10% 3%;
-    padding: 20% 10%;
-    border-radius: 10px;
-    background-blend-mode: soft-light;
-    background: url(images/scott-webb-OxHPDs4WV8Y-unsplash-removebg-preview.png), linear-gradient(to right,  rgb(88, 7, 180), rgb(176, 176, 245));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  margin: 10% 3%;
+  padding: 20% 10%;
+  border-radius: 10px;
+  background-blend-mode: soft-light;
+  background: url(images/scott-webb-OxHPDs4WV8Y-unsplash-removebg-preview.png),
+    linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .news-img {
-    display: none;
+  display: none;
 }
 .news-letter p {
-    padding: 8% 0;
-    text-align: left;
-    line-height: 30px;
+  padding: 8% 0;
+  text-align: left;
+  line-height: 30px;
 }
 .news-letter h1 {
-    text-align: left;
+  text-align: left;
 }
 .email-suscribe {
-    background-color: white;
-    overflow: hidden;
-    padding: 15% 3%;
-    border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  padding: 15% 3%;
+  border-radius: 10px;
 }
-.email-suscribe input[type = email] {
-    padding: 5% 3%;
-    border: 2px solid rgb(88, 7, 180);
-    border-radius: 5px;
-    width: 100%;
-    font-size: 1rem;
-    background-color: transparent;
+.email-suscribe input[type="email"] {
+  padding: 5% 3%;
+  border: 2px solid rgb(88, 7, 180);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: transparent;
 }
-.email-suscribe input[type = submit] {
-    display: flex;
-    justify-content: flex-end;
-    padding: 5% 10%;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+.email-suscribe input[type="submit"] {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5% 10%;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 
 /* ANOTHER SECTION: CONTACT US */
 .contact-us {
-    padding: 20% 3%;
+  padding: 20% 3%;
 }
 .contact-us-text {
-    padding: 3% 8%;
-    text-align: center;
-    margin: 0 20% 5% 20%;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
-    font-weight: bold;
-    border-radius: 5px;
-    color: white;
+  padding: 3% 8%;
+  margin: 0 20% 5% 20%;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3 ease;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.contact-us-text:hover {
+  border: none;
+}
+.contact-us-text:hover::after {
+  top: 0;
+  left: 0;
+}
+.contact-us-text::after {
+  content: "";
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 10px;
+  transition: 0.2s;
+  background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
 }
 .contact-us-text-two {
-    padding: 5% 3%;
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.685);
+  padding: 5% 3%;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.685);
 }
-.second-form input, textarea{
-    width: 100%;
-    margin: 5% 0;
-    color: white;
+.second-form input,
+textarea {
+  width: 100%;
+  margin: 5% 0;
+  color: white;
 }
-.second-form input[type = text], input[type = email] {
-    padding: 3% 3%;
-    border: 2px solid gray;
-    background-color: transparent;
+.second-form input[type="text"],
+input[type="email"] {
+  padding: 3% 3%;
+  border: 2px solid gray;
+  background-color: transparent;
 }
 textarea {
-    padding: 3% 3%;
-    border: 2px solid gray;
-    background-color: transparent;
+  padding: 3% 3%;
+  border: 2px solid gray;
+  background-color: transparent;
 }
-.second-form input[type = submit] {
-    padding: 5% 5%;
-    border: none;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    background: linear-gradient(to right, rgb(176, 176, 245), rgb(88, 7, 180));
+.second-form input[type="submit"] {
+  padding: 5% 5%;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
 }
-.second-form input::placeholder, textarea::placeholder {
-    color: white;
-    font-style: italic;
+.second-form input::placeholder,
+textarea::placeholder {
+  color: white;
+  font-style: italic;
 }
 
 /* LAST SECTION: BEGINNING OF FOOTER SECTION */
 footer {
-    background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
-    color: white;
-    padding: 5% 3%;
+  background: linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
+  color: white;
+  padding: 5% 3%;
 }
 .footer-child h3 {
-    font-size: 0.8rem;
-    padding: 3% 0;
+  font-size: 0.8rem;
+  padding: 3% 0;
 }
 .footer-child ul li {
-    list-style-type: none;
-    font-size: 0.8rem;
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.685);
+  list-style-type: none;
+  font-size: 0.8rem;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.685);
 }
 .footer-child {
-    margin: 5% 0;
+  margin: 5% 0;
 }
 .footer-child p {
-    font-size: 0.8rem;
-    line-height: 30px;
+  font-size: 0.8rem;
+  line-height: 30px;
 }
 .footer-child img {
-    width: 15%;
+  width: 15%;
 }
 
 /* DESIGN FOR MOBILE VERSION ENDED. */
 
 @media (min-width: 700px) {
-    body {
-        width: 100%;
-    }
-    .steps {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 5%;
-    }
-    .steps div {
-        /* padding: 10% 5%; */
-        margin: 10% 0;
-    }
-    .nft-collection {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 2%;
-    }
-    .timeline {
-        padding: 0 5%;
-        display: grid;
-        grid-template-columns: auto;
-    }
-    .faq-container {
-        padding: 20% 5%;
-    }
-    .questions {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 2%;
-    }
-    .news-img {
-        display: flex;
-        flex-direction: column;
-    }
-    .Hero-section-button {
-        flex-direction: row;
-        width: 100%;
-    }
-    .Hero-section-button button {
-        margin: 0 5% 0 0;
-        padding: 3% 8%;
-    }
-    .timeline-content {
-        font-size: 0.8rem;
-    }
-    .second-form input, textarea {
-        margin: 1% 0;
-        width: 80%;
-    }
+  body {
+    width: 100%;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+  }
+  .steps div {
+    /* padding: 10% 5%; */
+    margin: 10% 0;
+  }
+  .nft-collection {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2%;
+  }
+  .timeline {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .faq-container {
+    padding: 20% 5%;
+  }
+  .questions {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2%;
+  }
+  .news-img {
+    display: flex;
+    flex-direction: column;
+  }
+  .Hero-section-button {
+    flex-direction: row;
+    width: 100%;
+  }
+  .Hero-section-button button {
+    margin: 0 5% 0 0;
+    padding: 3% 8%;
+  }
+  .timeline-content {
+    font-size: 0.8rem;
+  }
+  .second-form input,
+  textarea {
+    margin: 1% 0;
+    width: 80%;
+  }
 
-    footer {
-        display: grid;
-        grid-template-columns:  auto auto;
-        gap: 5%;
-    }
-    .footer-child {
-        margin: 0;
-    }
+  footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+  padding: 5% 5%;
+
+  }
+  .footer-child {
+    margin: 0;
+  }
 }
 
 /* FOR SCREEN SIZES BETWEEN 800PX AND ABOVE... */
 
-
 @media (min-width: 1000px) {
-/* HERO SECTION BEGINS */
+  /* HERO SECTION BEGINS */
 
-    main {
-        padding: 10% 5%;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 2%;
-    }
-    .hero-container h1 {
-        font-size: 3.5rem;
-    }
-    .hero-container .number {
-        padding: 5% 0;
-    }
-    .hero-container p {
-        font-size: 1.2rem;
-     line-height: 35px;
-    }
-    .Hero-section-button {
-        flex-direction: row;
-        width: 100%;
-
-    }
-    .Hero-section-button button {
-        margin: 0 5% 0 0;
-        padding: 3% 8%;
-    }
-    .count {
-        text-align: left;
-    }
-    .count h1 {
+  main {
+    padding: 10% 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2%;
+  }
+  .hero-container h1 {
+    font-size: 3.5rem;
+  }
+  .hero-container .number {
+    padding: 5% 0;
+  }
+  .hero-container p {
+    font-size: 1.2rem;
+    line-height: 35px;
+  }
+  .Hero-section-button {
+    flex-direction: row;
+    width: 100%;
+  }
+  .Hero-section-button button {
+    margin: 0 5% 0 0;
+    padding: 3% 8%;
+  }
+  .count {
+    text-align: left;
+  }
+  .count h1 {
     font-size: 2.5rem;
-    }
-    .count p {
-        padding: 0 ;
-    }
-    .hero-img-section {
-        padding: 0;
-    }
-    .hero-img-section img {
-        height: 400px;
-    }
-/* SECTION : HOW IT WORKS */
-.aside-btn {
+  }
+  .count p {
+    padding: 0;
+  }
+  .hero-img-section {
+    padding: 0;
+  }
+  .hero-img-section img {
+    height: 400px;
+  }
+  /* SECTION : HOW IT WORKS */
+  .aside-btn {
     padding: 2% 2%;
     margin: 0 30%;
-}
-aside h1 {
+  }
+  aside h1 {
     padding: 2% 0;
     font-size: 2.5rem;
-}
-.text-aside {
+  }
+  .text-aside {
     margin: 0 20%;
     font-size: 1.2rem;
     line-height: 35px;
-}
-.steps {
+  }
+  .steps {
     padding: 5% 3%;
-    text-align: left; 
+    text-align: left;
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 2%;
-}
-.step-child {
+  }
+  .step-child {
     font-size: 1.2rem;
-}
-.steps h2 {
+  }
+  .steps h2 {
     font-size: 1.2rem;
     padding: 5% 0;
-}
-.stepsParagraph {
-font-size: 1rem;
-line-height: 35px;
-}
-/* SUB SECTION: NFT-VIDEOS */
-.nft-video {
+  }
+  .stepsParagraph {
+    font-size: 1rem;
+    line-height: 35px;
+  }
+  /* SUB SECTION: NFT-VIDEOS */
+  .nft-video {
     display: grid;
     grid-template-columns: auto auto;
     padding: 0 5%;
     gap: 5%;
-}
-.nft-video video {
+  }
+  .nft-video video {
     height: 400px;
-}
+  }
 
-.nft-video  button {
+  .nft-video button {
     margin: 5% 0;
     padding: 3% 8%;
-}
-.nft-collection-btn {
+  }
+  .nft-collection-btn {
     padding: 3% 8%;
     margin: 0;
     font-size: 1.2rem;
-}
-.nft-video .nftParagraph {
-font-size: 1rem;
-line-height: 35px;
-}
-/* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
-.nft-collection-section {
+  }
+  .nft-video .nftParagraph {
+    font-size: 1rem;
+    line-height: 35px;
+  }
+  /* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
+  .nft-collection-section {
     padding: 10% 5% 5% 5%;
-}
-.collection-btn {
+  }
+  .collection-btn {
     padding: 2% 5%;
     font-size: 1.2rem;
     margin: 0 25%;
-}
-.nft-collection-section h1 {
+  }
+  .nft-collection-section h1 {
     font-size: 2.5rem;
     padding: 3% 0 1% 0;
-}
-.nft-collection-section p {
+  }
+  .nft-collection-section p {
     line-height: 30px;
     margin: 0 25%;
-}
-.nft-collection {
+  }
+  .nft-collection {
     padding: 10% 0;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     gap: 2%;
-}
-.nft-collection div {
+  }
+  .nft-collection div {
     padding: 20% 5%;
-}
-.nft-collection h3 {
+  }
+  .nft-collection h3 {
     padding: 3% 3%;
-}
+  }
 
-.nft-collection button {
+  .nft-collection button {
     padding: 6% 30%;
     margin: 5% 0 3% 3%;
-}
-/* ROADMAP */
-.roadmap-container {
-padding: 10% 5%;
-}
-.roadmap-btn {
+  }
+  /* ROADMAP */
+  .roadmap-container {
+    padding: 10% 5%;
+  }
+  .roadmap-btn {
     padding: 2% 5%;
     font-size: 1.2rem;
     margin: 0 25%;
-}
-.roadmap-heading {
+  }
+  .roadmap-heading {
     font-size: 2.5rem;
     padding: 3% 0 1% 0;
-}
-.paragraph {
+  }
+  .paragraph {
     line-height: 30px;
     margin: 0 25%;
     padding: 0;
-}
-.year {
+  }
+  .year {
     margin: 5% 40%;
     padding: 2% 2%;
-}
-/* SUB SECTION FOR TIMELINE */
-.timeline {
+  }
+  /* SUB SECTION FOR TIMELINE */
+  .timeline {
     padding: 0 5%;
     display: grid;
     grid-template-columns: auto auto;
-}
-.timeline-content {
+  }
+  .timeline-content {
     padding: 8% 5%;
     gap: 10%;
-}
-.timeline-content:first-child {
+    font-size: 1rem;
+  }
+  .timeline-content:first-child {
     margin: 0 10% 15% 0;
-}
-.timeline-content:nth-child(2) {
+  }
+  .timeline-content:nth-child(2) {
     margin: 15% 10% 0 0;
     transform: translateY(20%);
-}
-.timeline-content:nth-child(3) {
+  }
+  .timeline-content:nth-child(3) {
     margin: 0 10% 15% 0;
-}
-.timeline-content:last-child {
+  }
+  .timeline-content:last-child {
     margin: 15% 10% 0 0;
     transform: translateY(20%);
-
-}
-.title {
+  }
+  .title {
     font-size: 1.3rem;
     padding: 2% 0;
-}
-/* FAQ SECTION  */
-.faq-container {
+  }
+  /* FAQ SECTION  */
+  .faq-container {
     padding: 20% 5%;
-}
-.faq-header {
+  }
+  .faq-header {
     padding: 2% 5%;
     font-size: 1.2rem;
     margin: 0 25%;
-}
-.faq-sub-header {
+  }
+  .faq-sub-header {
     font-size: 2.5rem;
     padding: 3% 0 1% 0;
-}
-.faq-text {
+  }
+  .faq-text {
     line-height: 30px;
     margin: 0 25%;
     padding: 0;
-}
-.questions {
+  }
+  .questions {
     display: grid;
     grid-template-columns: auto auto;
     gap: 10%;
     margin: 10% 0 0 0;
-}
-.faq-img img {
+  }
+  .faq-img img {
     margin: 0;
     padding: 0;
-}
-.show-btn button {
+  }
+  .show-btn button {
     width: 100%;
-}
+  }
 
-.display, .display1, .display2, .display3 {
+  .display,
+  .display1,
+  .display2,
+  .display3 {
     padding: 5% 5%;
     line-height: 30px;
     font-size: 1.2rem;
-}
-/* ANOTHER SECTION: SUSCRIBE TO OUR NEWS LETTER*/
-.news-letter {
+  }
+  /* ANOTHER SECTION: SUSCRIBE TO OUR NEWS LETTER*/
+  .news-letter {
     margin: 0 5%;
     padding: 5% 5%;
-
-}
-.flexx {
+  }
+  .flexx {
     display: grid;
     grid-template-columns: auto auto;
-}
-.news-letter p {
+  }
+  .news-letter p {
     padding: 3% 0;
     font-size: 1.2rem;
-}
-.news-img {
+  }
+  .news-img {
     display: flex;
     flex-direction: column;
-}
-.news-letter h1 {
-   font-size: 2.5rem;
-}
-.email-suscribe {
+  }
+  .news-letter h1 {
+    font-size: 2.5rem;
+  }
+  .email-suscribe {
     padding: 5% 3%;
     border-radius: 10px;
-}
-.email-form {
+  }
+  .email-form {
     display: flex;
-}
-.email-suscribe input[type = email] {
+  }
+  .email-suscribe input[type="email"] {
     padding: 3% 3%;
-}
-.contact-us {
+  }
+  .contact-us {
     padding: 20% 5% 5% 5%;
-}
-.contact-us-text {
+  }
+  .contact-us-text {
     padding: 2% 5%;
     font-size: 1.2rem;
     margin: 0 25%;
-}
-.contact-us h1 {
+  }
+  .contact-us h1 {
     font-size: 2.5rem;
     padding: 3% 0 1% 0;
-}
-.contact-us-text-two {
+  }
+  .contact-us-text-two {
     line-height: 30px;
     margin: 0 25%;
     padding: 0;
-}
-.second-form {
+  }
+  .second-form {
     margin: 5% 0;
-}
-.second-form input, textarea {
+  }
+  .second-form input,
+  textarea {
     margin: 1% 0;
     width: 80%;
-}
-.second-form input[type = text], input[type = email] {
+  }
+  .second-form input[type="text"],
+  input[type="email"] {
     padding: 1% 2%;
-}
-textarea {
+  }
+  textarea {
     padding: 1% 2%;
     height: 100px;
     overflow: hidden;
-}
-.second-form input[type = submit] {
+  }
+  .second-form input[type="submit"] {
     padding: 2% 4%;
     width: 20%;
-}
-/* LAST SECTION: BEGINNING OF FOOTER SECTION */
-footer {
+  }
+  /* LAST SECTION: BEGINNING OF FOOTER SECTION */
+  footer {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 10%;
-}
-.footer-child h3 {
+  }
+  .footer-child h3 {
     font-size: 0.8rem;
     padding: 0;
-}
-.footer-child {
+  }
+  .footer-child {
     margin: 0;
-}
-.footer-child p, .footer-child ul li {
+  }
+  .footer-child p,
+  .footer-child ul li {
     font-size: 0.9rem;
+  }
 }
-
-
-}
-
-
