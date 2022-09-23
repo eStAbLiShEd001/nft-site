@@ -116,7 +116,6 @@ main {
 }
 .hero-img-section {
   animation: slideright 1s alternate;
-
   display: flex;
   flex-direction: column;
   padding: 15% 0;
@@ -177,19 +176,8 @@ aside p {
 .steps {
   padding: 20% 3%;
   text-align: left;
-  animation: disappear 2s 4s alternate;
 }
-@keyframes disappear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
+
 .steps h2 {
   font-size: 1rem;
   padding: 5% 0;
@@ -720,6 +708,8 @@ footer {
 
 /* DESIGN FOR MOBILE VERSION ENDED. */
 
+/* FOR SCREEN SIZES BETWEEN 700PX AND ABOVE... */
+
 @media (min-width: 700px) {
   body {
     width: 100%;
@@ -733,6 +723,15 @@ footer {
     /* padding: 10% 5%; */
     margin: 10% 0;
   }
+  .nft-video button {
+    padding: 3% 8%;
+  }
+  .collection-btn {
+    padding: 3% 5%;
+  }
+  .year {
+    padding: 3% 5%;
+  }
   .nft-collection {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -745,6 +744,11 @@ footer {
   }
   .faq-container {
     padding: 20% 5%;
+  }
+  .faq-img img {
+    margin: 0;
+    padding: 0;
+    height: 300px;
   }
   .questions {
     display: grid;
@@ -784,9 +788,9 @@ footer {
   }
 }
 
-/* FOR SCREEN SIZES BETWEEN 800PX AND ABOVE... */
+/* FOR SCREEN SIZES BETWEEN 900PX AND ABOVE... */
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   /* HERO SECTION BEGINS */
 
   main {
@@ -996,6 +1000,7 @@ footer {
   .faq-img img {
     margin: 0;
     padding: 0;
+    height: 400px;
   }
   .show-btn button {
     width: 100%;
