@@ -277,7 +277,7 @@ aside p {
 /* ANOTHER SECTION: DISCOVER OUR NEW COLLECTION */
 .nft-collection-section {
   background: rgba(0, 0, 0, 0.212)
-    url(images/choong-deng-xiang-EbbqeyHpbto-unsplash.jpg) repeat fixed 100%;
+   url(images/choong-deng-xiang-EbbqeyHpbto-unsplash.jpg) repeat fixed 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -562,7 +562,7 @@ aside p {
   border-radius: 10px;
   background-blend-mode: soft-light;
   background: url(images/scott-webb-OxHPDs4WV8Y-unsplash-removebg-preview.png),
-    linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
+  linear-gradient(to right, rgb(88, 7, 180), rgb(176, 176, 245));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -790,7 +790,7 @@ footer {
 
 /* FOR SCREEN SIZES BETWEEN 900PX AND ABOVE... */
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   /* HERO SECTION BEGINS */
 
   main {
