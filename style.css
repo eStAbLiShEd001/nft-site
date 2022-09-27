@@ -714,6 +714,10 @@ footer {
   body {
     width: 100%;
   }
+  .hero-img-section {
+    display: grid;
+    place-content: center;
+  }
   .steps {
     display: grid;
     grid-template-columns: auto auto;
@@ -827,6 +831,7 @@ footer {
     padding: 0;
   }
   .hero-img-section {
+    display: block;
     padding: 0;
   }
   .hero-img-section img {
@@ -1012,7 +1017,7 @@ footer {
   .display3 {
     padding: 5% 5%;
     line-height: 30px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   /* ANOTHER SECTION: SUSCRIBE TO OUR NEWS LETTER*/
   .news-letter {
