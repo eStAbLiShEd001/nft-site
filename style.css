@@ -515,6 +515,7 @@ aside p {
 }
 .show-btn {
   text-align: left;
+
 }
 .show-btn button {
   padding: 5% 8%;
@@ -529,6 +530,7 @@ aside p {
   cursor: pointer;
 }
 
+
 /* HID THE TEXTS HERE */
 .hidden0,
 .hidden1,
@@ -536,16 +538,10 @@ aside p {
 .hidden3,
 .hidden4 {
   display: none;
-}
-
-.overlay {
-  position: absolute;
-  transform: translateY(-150%);
-  width: 90%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
   z-index: 5;
+}
+.questions {
+  position: relative;
 }
 .display,
 .display1,
