@@ -1002,6 +1002,7 @@ footer {
     margin: 0;
     padding: 0;
     height: 400px;
+    width: 500px;
   }
   .show-btn button {
     width: 100%;
